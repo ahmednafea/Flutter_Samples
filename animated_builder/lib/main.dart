@@ -5,9 +5,9 @@ void main() => runApp(MyApp());
 class MyApp extends StatefulWidget {
   @override
   _SpinnerState createState() => _SpinnerState();
-
 }
 class _SpinnerState extends State<MyApp> with SingleTickerProviderStateMixin {
+
   AnimationController _controller;
 
   @override
@@ -18,13 +18,11 @@ class _SpinnerState extends State<MyApp> with SingleTickerProviderStateMixin {
       vsync: this,
     )..repeat();
   }
-
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
   }
-
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
@@ -33,7 +31,7 @@ class _SpinnerState extends State<MyApp> with SingleTickerProviderStateMixin {
       builder: (BuildContext context, Widget child) {
         return Transform.rotate(
           angle: _controller.value * 2.0 * 2.17,
-          child: child,
+          child: child
         );
       },
     );
