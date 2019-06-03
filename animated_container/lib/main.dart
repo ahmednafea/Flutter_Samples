@@ -5,9 +5,8 @@ void main() => runApp(MyApp());
 class MyApp extends StatefulWidget {
   @override
   FlightExampleState createState() {
-    return new FlightExampleState();
+    return FlightExampleState();
   }
-
 }
 class FlightExampleState extends State<MyApp> {
 
@@ -22,7 +21,7 @@ class FlightExampleState extends State<MyApp> {
         alignment: _alignment,
         child: Container(
           height: 50.0,
-          child: Icon(Icons.airplanemode_active, size: 50.0, color: Colors.blueAccent,),
+          child: Icon(Icons.airplanemode_active, size: 50.0, color: Colors.blueAccent),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -34,7 +33,7 @@ class FlightExampleState extends State<MyApp> {
             });
           },
           icon: Icon(Icons.airplanemode_active),
-          label: Text("Take Flight")),
+          label: Text("Take Flight"))
     );
   }
 }
