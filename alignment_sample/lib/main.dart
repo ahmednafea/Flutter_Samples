@@ -27,7 +27,7 @@ class MyLayout extends StatelessWidget {
         child:
         Align(
           alignment: Alignment.bottomLeft,
-          child: Text('Left botom', textScaleFactor: 1.5,),
+          child: Text('Left botom', textScaleFactor: 1.5),
         ),
       )
     );
