@@ -5,12 +5,12 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Bottom Sheet Sample',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Bottom Sheet Sample'),
+      home: MyHomePage(title: 'Bottom Sheet Sample'),
     );
   }
 }
@@ -21,22 +21,22 @@ class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
       ),
-      floatingActionButton: new FloatingActionButton(
+      floatingActionButton: FloatingActionButton(
         onPressed: (){
           _settingModalBottomSheet(context);
         },
-        child: new Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
     );
   }
@@ -47,16 +47,16 @@ void _settingModalBottomSheet(context){
       context: context,
       builder: (BuildContext bc){
         return Container(
-          child: new Wrap(
+          child: Wrap(
             children: <Widget>[
-              new ListTile(
-                  leading: new Icon(Icons.music_note),
-                  title: new Text('Music'),
+              ListTile(
+                  leading: Icon(Icons.music_note),
+                  title: Text('Music'),
                   onTap: () => {}
               ),
-              new ListTile(
-                leading: new Icon(Icons.videocam),
-                title: new Text('Video'),
+              ListTile(
+                leading: Icon(Icons.videocam),
+                title: Text('Video'),
                 onTap: () => {},
               ),
             ],
