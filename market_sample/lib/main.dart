@@ -314,7 +314,7 @@ class _MyHomePageState extends State<MyHomePage>
                       Text(
                         price.toString(),
                         style: TextStyle(
-                            color: Color(0xFFF76053),
+                            color: Colors.lightBlue,
                             fontFamily: 'Montserrat',
                             fontSize: 15.0),
                       )
